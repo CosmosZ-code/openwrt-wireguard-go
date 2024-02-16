@@ -1,8 +1,11 @@
 name: Build wireguard-go for Padavan
-on:
+
+on: 
   push:
-    branches:
+    branches: 
       - master
+
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -12,8 +15,7 @@ jobs:
       env:
         DEBIAN_FRONTEND: noninteractive
       run: |
-        #sudo apt-get update
-        wget -O /tmp/golang.tar.gz https://dl.google.com/go/go1.13.7.linux-amd64.tar.gz
+        wget -O /tmp/golang.tar.gz https://dl.google.com/go/go1.13.7.linux-amd64.tar.gz
         sudo tar -C /usr/local -xvzf /tmp/golang.tar.gz
         export PATH=$PATH:/usr/local/go/bin
     - name: 编译wireguard-go
