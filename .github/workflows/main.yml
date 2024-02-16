@@ -1,10 +1,8 @@
 name: Build wireguard-go for Padavan
-
-on: 
-  push:
-    branches: 
-      - master
-
+on:
+  push:
+    branches:
+      - master
 jobs:
   build:
     runs-on: ubuntu-latest
