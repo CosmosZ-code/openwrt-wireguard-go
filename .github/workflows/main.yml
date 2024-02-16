@@ -16,8 +16,8 @@ jobs:
         DEBIAN_FRONTEND: noninteractive
       run: |
         wget -O /tmp/golang.tar.gz https://dl.google.com/go/go1.13.7.linux-amd64.tar.gz
-        sudo tar -C /usr/local -xvzf /tmp/golang.tar.gz
-        export PATH=$PATH:/usr/local/go/bin
+        sudo tar -C /usr/local -xvzf /tmp/golang.tar.gz
+        export PATH=$PATH:/usr/local/go/bin
     - name: 编译wireguard-go
       run: |
         mkdir -p /tmp/gobuild/ && cd /tmp/gobuild/
