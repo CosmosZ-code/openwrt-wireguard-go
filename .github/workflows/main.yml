@@ -20,6 +20,8 @@ jobs:
         export PATH=$PATH:/usr/local/go/bin
 
     - name: 编译wireguard-go
+      env:
+        DEBIAN_FRONTEND: noninteractive
       run: |
         mkdir -p /tmp/gobuild/ && cd /tmp/gobuild/
         git clone https://git.zx2c4.com/wireguard-go
